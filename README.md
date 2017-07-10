@@ -1,6 +1,7 @@
 # typecho-theme-sea
 > 愿乘风破浪，翱翔远方。
 <!--more-->
+PJPX有已知bug 尽力修复
 
 本主题 基于 Typecho 默认主题修改，参考一部分网站 CSS样式。
 
