@@ -12,15 +12,15 @@ $this->permalink();
 $this->title();
 ?></a></h1>
         <ul class="post-meta">
-            <li><?php 
-_e('时间: ');
+            <li><i class="fa fa-calendar" aria-hidden="true"></i><?php 
+_e(' 时间: ');
 ?><time datetime="<?php 
 $this->date('c');
 ?>" itemprop="datePublished"><?php 
 $this->date();
 ?></time></li>
-            <li><?php 
-_e('分类: ');
+            <li><i class="fa fa-bookmark-o" aria-hidden="true"></i><?php 
+_e(' 分类: ');
 $this->category(',');
 ?></li>
         </ul>
@@ -29,8 +29,8 @@ $this->category(',');
 $this->content();
 ?>
         </div>
-        <p itemprop="keywords" class="tags"><?php 
-_e('标签: ');
+        <p itemprop="keywords" class="tags"><i class="fa fa-tag" aria-hidden="true"></i><?php 
+_e(' 标签: ');
 $this->tags(', ', true, 'none');
 ?></p>
     </article>

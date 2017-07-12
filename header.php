@@ -26,24 +26,27 @@ $this->options->themeUrl('/css/grid.css');
 $this->options->themeUrl('/css/style.css');
 ?>">
 
-    <script src="//bwcx.site/usr/themes/default/js/pace.min.js"></script>
-    <link href="//bwcx.site/usr/themes/default/css/pace.css" rel="stylesheet" />
+    <script src="/usr/themes/Sea/js/pace.min.js"></script>
+    <link href="/usr/themes/Sea/css/pace.css" rel="stylesheet" />
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
     <script src="//cdnjscn.b0.upaiyun.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
-    <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js" type="text/javascript"></script>
-    <script src="//bwcx.site/usr/themes/default/js/jquery.pjax.js"></script>
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/usr/themes/Sea/js/jquery.pjax.js"></script>
 
 <script>
-//本站实例
 jQuery(document).ready(function(){
     var $=jQuery; 
         //绑定链接
     $.pjax({
-        selector: "a[href^='<?php $this->options->siteUrl(); ?>'][href$='.html']",
+        selector: "a[href^='<?php $this->options->siteUrl();?>']",
         container: '.row', //内容替换的容器
         show: 'slide',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
         cache: false,  //是否使用缓存
@@ -68,22 +71,19 @@ jQuery(document).ready(function(){
             $(".spinner").hide();
             $(".row").css("opacity","1");
             // Main
-            initHeader();
-            addListeners();
-            if (navigator.userAgent.indexOf('Firefox') >= 0){
-                document.documentElement.scrollTop=120;
-            }
-            else
-            {
-               $('body').animate({scrollTop: 120});
-            }
-             
+	    initHeader();
+	    addListeners();
+	    if (navigator.userAgent.indexOf('Firefox') >= 0){
+		document.documentElement.scrollTop=120;
+	    }
+	    else
+		{
+	        $('body').animate({scrollTop: 120});
+	    }
      }); 
-     
-});   
+}); 
 </script>
 
-    <!-- 通过自有函数输出HTML头部信息 -->
     <?php 
 $this->header();
 ?>

@@ -1,10 +1,10 @@
 <?php
 /**
- * 乘风破浪，翱翔远方。
+ * 乘风破浪，扬帆远航。
  * 
  * @package Sea
  * @author zhic16
- * @version 1.1
+ * @version 1.2
  * @link https://bwcx.site
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) {
@@ -23,21 +23,21 @@ while ($this->next()) {
     $this->title();
     ?></a></h2>
 			<ul class="post-meta">
-				<li><?php 
-    _e('时间: ');
+				<li><i class="fa fa-calendar" aria-hidden="true"></i><?php 
+    _e(' 时间: ');
     ?><time datetime="<?php 
     $this->date('c');
     ?>" itemprop="datePublished"><?php 
     $this->date();
     ?></time></li>
-				<li><?php 
-    _e('分类: ');
+				<li><i class="fa fa-bookmark-o" aria-hidden="true"></i><?php 
+    _e(' 分类: ');
     $this->category(',');
     ?></li>
 			</ul>
             <div class="post-content" itemprop="articleBody">
     			<?php 
-    $this->content('- 阅读剩余部分 -');
+    $this->content('- Read More -');
     ?>
             </div>
         </article>

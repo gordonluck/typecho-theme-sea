@@ -1,3 +1,30 @@
+function initHeader() {
+	width = document.body.clientWidth-20;
+	height = 350;
+	target = {x: 0, y: height};
+
+	largeHeader = document.getElementById('header');
+	largeHeader.style.height = height+'px';
+
+	canvas = document.getElementById('demo-canvas');
+	canvas.width = width;
+	canvas.height = height;
+	ctx = canvas.getContext('2d');
+
+	// create particles
+	circles = [];
+	for(var x = 0; x < width*0.5; x++) {
+		var c = new Circle();
+		circles.push(c);
+	}
+	animate();
+}
+
+// Event handling
+function addListeners() {
+	window.addEventListener('scroll', scrollCheck);
+	window.addEventListener('resize', resize);
+}
 /*!
  * pjax(ajax + history.pushState) for jquery
  * 
