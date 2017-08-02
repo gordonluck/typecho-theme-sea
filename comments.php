@@ -36,6 +36,7 @@
             <?php endif; ?>
     		<p>
                 <label for="textarea" class="required"><?php _e('内容'); ?></label>
+<?php Smilies_Plugin::output(); ?>
                 <textarea rows="8" cols="50" name="text" id="comment" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </p>
     		<p>
