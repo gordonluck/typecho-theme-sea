@@ -6,6 +6,10 @@
 ![screenshot.png](https://ooo.0o0.ooo/2017/07/12/5965e3c6c58db.png)
 
 #### 更新日志
+1.6 发布 20170802
+Delete Pjax
+1.5 发布 20170801
+Something New
 1.2 发布 20170712
 1）加入 Font Awesome 图标
 2）修改 评论样式
